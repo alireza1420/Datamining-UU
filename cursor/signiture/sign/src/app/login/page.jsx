@@ -8,7 +8,30 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
+  // const  handleLogin = async () => {
+  //   try{
+  //     const response = await fetch('http://localhost:3001/api/login',{
+  //       method:'POST',
+  //       headers:{
+  //         'Content-Type':'application/json',
+  //         body:JSON.stringify({email,password})
+  //       },
+       
+        
+  //     });
+  //     const data = await response.json();
+  //     if(data.success){
+  //       router.push('/dashbord');
+  //     }else{
+  //       setError('Invalid email or password');
+  //     }
+  //   }catch(error){
+  //     console.error('Login error:',error);
+  //     setError('An error occurred during login');
+  //   }
+
+   const  handleLogin = () => {
+
     if (email === 'admin' && password === 'admin') {
       console.log('Login successful');
       router.push('/dashbord');
